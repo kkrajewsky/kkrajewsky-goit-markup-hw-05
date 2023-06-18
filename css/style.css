@@ -128,14 +128,13 @@ button:focus {
     width: 370px;
     position: absolute;
     background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(294px);
+    overflow: hidden;
     transition: transform 250ms ease-in-out;
-    visibility: hidden;
 }
 
 .overlay-box:hover .overlay {
-    transform: translateY(0);
-    visibility: visible;
+    transform: translateY(-294px);
+    overflow: visible;
 }
 
 
@@ -148,7 +147,7 @@ button:focus {
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.03em;
-    
+    height: 294px;
 }
 
 

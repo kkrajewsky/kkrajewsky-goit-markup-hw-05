@@ -20,7 +20,7 @@
 <body>
 <!-- Nagłówek strony -->
 <header>
-
+    
     <div class="container header-port">
     <a href="./index.html" class="first-half-webstudio">Web<span class="second-half-webstudio">Studio</span></a>
     <!-- Dane nawigacyjne-->
@@ -28,8 +28,8 @@
     <nav class="header-ppage">
 
             <ul class="ppage-list">
-            <li><a href="#agencja" class="agency-ppage">Agencja</a></li>
-            <li><a href="./portfolio.html" class="portfolio-ppage">Portfolio</a></li>
+            <li><a href="./index.html" class="agency-ppage">Agencja</a></li>
+            <li class="pseudo-portfolio"><a href="./portfolio.html" class="portfolio-ppage">Portfolio</a></li>
             <li><a href="#kontakt" class="contact-ppage">Kontakt</a></li>
             </ul>
     </nav>
@@ -64,23 +64,38 @@
     <section class="photos-box">
         <ul class="photos">
             <!-- Pierwsza Trójka-->
-            <li>
+                <div class="overlay-box">
+            <li class="pseudo-technocrack">
+                <div class="overlay">
+                    <p class="over-paragraph">
+                        Technocrack jest popularną platformą wykorzystywaną do
+                        rozpowszechniania koronawirusa. Firmy wykorzystują tę
+                        platformę do celów szpiegowskich i ataków na niezabezpieczone
+                        serwery konkurencji
+                    </p>
+                </div>
                 <img src="images/technocrack.jpg" alt="Opened Lapotop with 3 profiles of CV on screen" width="370"
                     height="294" />
+                    
+
+                <figcaption>
                 <h3>Technocrack</h3>
-                <p>Strona Internetowa</p>
+                <p class="ppage-paragraph">Strona Internetowa</p>
+                </figcaption>
             </li>
+            </div>
             <li>
-                <img src="images/nba.jpg" alt="Two basketball players in the air fighit for the ball" width="370"
-                    height="294" />
+                <img src="images/nba.jpg" alt="Two basketball players in the air fighit for the ball" width="370px"
+                    height="294px" />
                 <h3>Grafika New Orlean vs Golden Star</h3>
-                <p>Dizajn</p>
+                <p class="ppage-paragraph">Dizajn</p>
             </li>
             <li>
                 <img src="images/seafood.jpg" alt="Seafood restaurant logotype, which has existed since 2001y."
                     width="370" height="294" />
+
                 <h3>Restauracja Seafood</h3>
-                <p>Aplikacja</p>
+                <p class="ppage-paragraph">Aplikacja</p>
             </li>
             <!-- Druga Trójka -->
             <li>
@@ -94,33 +109,33 @@
                     alt="Two packages on whit background. One box is White colour, one is Brown" width="370"
                     height="294" />
                 <h3>Projekt Boxes</h3>
-                <p>Aplikacja</p>
+                <p class="ppage-paragraph">Aplikacja</p>
             </li>
             <li>
                 <img src="images/inspiration.jpg" alt="Slim desktop monitor on white background." width="370"
                     height="294" />
                 <h3>Inspiration has no Borders</h3>
-                <p>Strona Internetowa</p>
+                <p class="ppage-paragraph">Strona Internetowa</p>
             </li>
             <!-- Trzecia Trójka -->
             <li>
                 <img src="images/magazine.jpg" alt="Nice looking limited edition's magazine on white background."
                     width="370" height="294" />
                 <h3>Magazyn Limited Edition</h3>
-                <p>Dizajn</p>
+                <p class="ppage-paragraph">Dizajn</p>
             </li>
             <li>
                 <img src="images/projekt-lab.jpg" alt="White label with cord and letters on itself." width="370"
                     height="294" />
                 <h3>Projekt LAB</h3>
-                <p>Marketing</p>
+                <p class="ppage-paragraph">Marketing</p>
             </li>
             <li>
                 <img src="images/growing-business.jpg"
                     alt="Somebody's writing on notebok, there is glasses and other stuff on desk." width="370"
                     height="294" />
                 <h3>Growing Business</h3>
-                <p>Aplikacja</p>
+                <p class="ppage-paragraph">Aplikacja</p>
             </li>
         </ul>
         </div>
@@ -174,5 +189,6 @@
     </section>
 
 </footer>
+
 </body>
 </html>

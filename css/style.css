@@ -120,8 +120,7 @@ button:focus {
 
 .overlay-box {
     position: relative;
-    overflow: visible;
-
+    overflow: hidden;
 }
 
 .overlay {
@@ -129,8 +128,7 @@ button:focus {
     width: 370px;
     position: absolute;
     background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(294px);
-    visibility: hidden;
+    transform: translateY(405px);
 }
 
 .overlay-box:hover .overlay {

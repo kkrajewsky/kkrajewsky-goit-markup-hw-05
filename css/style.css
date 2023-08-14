@@ -80,15 +80,13 @@ a {
 
 /** początek strony**/
 
-button:hover {
-    background-color: var(--elements-color);
-    color: var(--footer-adress-color);
+/** OUTLINE 
+* {
+    outline: 1px solid seagreen;
+    
 }
 
-button:focus {
-    background-color: var(--elements-color);
-    color: var(--footer-adress-color);
-}
+**/
 
 .header-ppage {
     padding: 32px 0;
@@ -116,11 +114,20 @@ button:focus {
     display: flex;
     align-items: center;
 }
-    
+
+.newsletter-label >span {
+    font-size: inherit;
+}
 
 .overlay-box {
     position: relative;
     overflow: hidden;
+}
+
+.form-after>p::before {
+    content: url(//icons.svg#icon-x);
+    width: 18px;
+    height: 18px;
 }
 
 .overlay {
@@ -129,12 +136,15 @@ button:focus {
     position: absolute;
     background-color: rgba(33, 150, 243, 0.9);
     overflow: hidden;
-    transition: transform 250ms ease-in-out;
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-box:hover .overlay {
     transform: translateY(-294px);
     overflow: visible;
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -153,58 +163,86 @@ button:focus {
 
 .agency-color:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agency-color:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-color:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-color:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-color:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-color:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-color:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-color:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .number-color:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }n
 
 .number-color:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-ppage:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-ppage:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .number-ppage:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .number-ppage:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .letter-icon {
@@ -228,6 +266,7 @@ button:focus {
 
 .footer-bg {
     background: var(--dark-background-color);
+    padding: 60px 0;
 }
 
 
@@ -247,6 +286,7 @@ button:focus {
     background-position: center;
     background-repeat: no-repeat;
     margin: 0 auto;
+
 
 }
 
@@ -494,16 +534,144 @@ button:focus {
     align-items: flex-end;
 }
 
-.modal-box::backdrop {
+
+.newsletter-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.96px;
+}
+
+.newsletter-icon {
+    fill: var(--background-color);
+}
+
+.newsletter-label {
+    color: var(--background-color);
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    position: relative;
+    top: 12px;
+    
+}
+
+.newsletter-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: inherit;
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: rgba(33, 150, 243, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: var(--background-color);
+}
+
+.newsletter-input::placeholder {
+    padding: 15px 295px 15px 16px;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    font-family: Roboto;
+    line-height: 20px;
+    letter-spacing: 0.48px;
+}
+
+.newsletter-button-flex {
+    position: relative;
+    padding-top: 46px;
+    left: -50px;
+}
+
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    translate: -50% -50%;
+    top: 50%;
+    left: 50%;
+    background: var(--background-color);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: auto;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+
+    }
+
+.backdrop {
     background: rgba(0, 0, 0, 0.2);
+    height: 1025px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+
+}
+
+.is-hidden {
+    pointer-events: none;
     visibility: visible;
+    opacity: 0;
+}
+
+.x-button {
+    position: relative;
+    background: inherit;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: solid 1px rgba(0, 0, 0, 0.10);
+    margin-left: 480px;
+    margin-top: 8px;
+}
+
+.form-box {
+    display: inline-block;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+
+.form-box >h1 {
+    display: flex;
+    align-items: center;
 }
 
 .our-team {
     background-color: var(--team-section);
-    
+
 }
 
+.x-symbol {
+    font-size: 18px;
+    fill: var(--pure-black-color);
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+}
 
 .team-img {
     display: flex;
@@ -555,6 +723,8 @@ button:focus {
 
 .footer-box li:hover {
     background-color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-box-ppage li {
@@ -572,11 +742,15 @@ button:focus {
 
 .footer-box-ppage li:hover {
     background-color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons li:hover {
     fill: var(--white-letters);
     background-color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -587,6 +761,8 @@ button:focus {
 
 .join-us:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-us-ppage {
@@ -596,6 +772,8 @@ button:focus {
 
 .join-us-ppage:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-box {
@@ -621,6 +799,11 @@ button:focus {
     max-height: 252px;
     display: flex;
     gap: 70px;
+    
+}
+
+.ppage-footer-second-flexbox {
+
 }
 
 .clients-icons {
@@ -644,6 +827,8 @@ button:focus {
 
 .clients-icons li:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients h2 {
@@ -801,10 +986,14 @@ button:focus {
 
 .agency-ppage:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agency-ppage:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-ppage {
@@ -828,6 +1017,8 @@ button:focus {
 
 .contact-ppage:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-ppage:focus {
@@ -870,10 +1061,14 @@ button:focus {
 
 .adress-ppage:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-ppage:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-color {
@@ -885,14 +1080,19 @@ button:focus {
     color: var(--background-color);
     display: flex;
     padding-top: 20px;
+    min-width: 248px;
 }
 
 .adress-color:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-color:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-color-bot:hover {
@@ -936,6 +1136,8 @@ border: 1px solid #EEEEEE;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 0px 4px 4px rgba(0, 0, 0, 0.06),
 1px 4px 6px rgba(0, 0, 0, 0.16);
+transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .all-buttons button {
@@ -945,17 +1147,28 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 .all-buttons button:hover,
 .all-buttons button:focus {
     background: var(--elements-color);
+    color: var(--footer-adress-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
+button:focus {
+    background-color: var(--elements-color);
+    
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .photos {
     display: flex;
     flex-flow: wrap;
-    gap: 26px;
     justify-content: space-between;
-
+    gap: 26px;
+    align-items: stretch;
 }
 
 .photos h3 {
@@ -989,10 +1202,14 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 
 .mail-color-foot-ppage:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-color-foot-ppage:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .number-foot-ppage {
@@ -1008,10 +1225,14 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 
 .number-foot-ppage:hover {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .number-foot-ppage:focus {
     color: var(--elements-color);
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Ogólne */

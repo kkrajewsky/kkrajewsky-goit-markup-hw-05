@@ -16,16 +16,20 @@
 </head>
 
 <body>
-    <div class="modal-box">
-    <header>
         
+    
+        
+    <header>
+            
         <div class="container header-mp">
+
         
                 <a href="./index.html" class="first-half-webstudio">Web<span
                         class="second-half-webstudio">Studio</span></a>
-
+                    
                 <nav class="header-nav">
-                        
+                    
+                
                     <ul class="header-list">
                         <li class="pseudo-agency"><a href="#agencja" class="agency-color">Agencja</a></li>
                         <li><a href="./portfolio.html" class="portfolio-color">Portfolio</a></li>
@@ -54,13 +58,16 @@
 
         
     <section class="first-class">
+        
         <div class="container">
-
-        
+            
         <h1 class="main-page-text">EFEKTYWNE ROZWIĄZANIA DLA NASZEGO BIZNESU</h1>
-            <button type="button" class="first-button">Zamów usługę</button>
         
+            <button type="button" class="first-button" data-modal-open>Zamów usługę</button>
+
+                
         </div>
+        
     </section>
         
 
@@ -114,7 +121,7 @@
         </ul>
         </div>
         </section>
-    </div>
+    
 
     <section class="section photos-section">
         <div class="container">
@@ -316,16 +323,15 @@
                 
                 
             <ul>
-                <li><a href="https://goo.gl/maps/rs3VnenkmmgVE36X9" class="adress-color" target="_blank" rel="noopener noreferrer nofollow">m. Warszawa, Aleje Jerozolimskie 21</a></li>
+                <li><a href="https://goo.gl/maps/rs3VnenkmmgVE36X9" target="_blank" rel="noopener noreferrer nofollow"><span class="adress-color">m. Warszawa, Aleje Jerozolimskie 21</span></a></li>
                 <li><a href="meilto:info@exampe.com" class="mail-color-bot">info@example.com</a></li>
-                <li><a href="tel:+48111111111" class="number-color-bot">+48 111 111 111</a></li>
+                <li><a href="tel:+48111111111"><span class="number-color-bot">+48 111 111 111</span></a></li>
             </ul>
             </address>
                 </div>
             
                 <div>
-                    <h5 class="join-us">DOŁĄCZ DO NAS
-                    </h5>  
+                    <h5 class="join-us">DOŁĄCZ DO NAS</h5>  
                     <ul class="footer-box">
                     <li><svg href="#" width="20px" height="20px">
                         <use href="./icons.svg#icon-instagram"></use>
@@ -344,12 +350,57 @@
                     </svg></li>
                     </ul>
                         
+                </div class=ppage-footer-second-flexbox>
+                    <form>
+                        <label class="newsletter-label">
+                            <span>ZAPISZ SIĘ DO NEWSLETTERA</span>
+                        </label>
+                        <input
+                        type="email"
+                        name="newsletter-email"
+                        placeholder="E-mail"
+                        id="email-id"
+                        class="newsletter-input">
+                    </form>
+                    <div class="newsletter-button-flex">
+                        <button type="button" class="newsletter-button"><span class="newsletter-button-span">Zapisz się</span>
+                            <svg class="newsletter-icon" width="24px" height="24px">
+                                <use href="./icons.svg#icon-paper-plane"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                
         </div>
         </section>
         
     </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                
+            <button type="button" class="x-button" data-modal-close><svg class="x-symbol" width="18px" height="18px">
+                <use href="./icons.svg#icon-x"></use></svg>
+            </button>
+            <div class="form-box">
+            <h1>Zostaw swoje dane w Formularzu</h1>
+            
+            <form class="form-after">
+                <p>Imie</p>
+                <label class="icon-after">
+                    <input type="text" name="name" placeholder=""/>
+                </label>
+                <p>Telefon</p>
+                <label>Telefon
+                    <input type="text" name="name" placeholder="" />
+                </label>
+            </div>
+                
+            </form>
+
+        </div>
+            </div>
+
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
